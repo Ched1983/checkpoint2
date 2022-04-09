@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Game from './Game';
 import axios from 'axios';
+import Header from './Header';
 
 const GameList = () => {
     const [resultApi, setResultApi] = useState([]);
@@ -17,11 +18,12 @@ const GameList = () => {
     }
     return (
         <div>
+            <Header />
             <button onClick={filtered}>{filtre? 'Tous les jeux' : 'Filtre note > 4,5'}</button>
             {resultApi
                 .filter((gameFiltre)=>filtre? gameFiltre.rating >= 4.5 : gameFiltre )
                 .map(result => {
-                    return <Game key={result.id} name={result.name} image={result.background_image} note={result.rating} />
+                    return <Game key={result.id} id={result.id} name={result.name} image={result.background_image} note={result.rating} />
                 })
             }
         </div>

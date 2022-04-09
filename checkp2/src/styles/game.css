@@ -1,0 +1,22 @@
+.noneGame {
+    display: none;
+}
+
+.game{
+    display: block;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+    background-color: gray;
+}
+
+.game_title{
+    color: white;
+    font-size: 30px;
+}
+
+.game_img{
+    height: 50px;
+    width: auto;
+}
+

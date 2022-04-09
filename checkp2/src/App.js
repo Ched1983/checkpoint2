@@ -1,12 +1,15 @@
-import './App.css';
-import Header from './Components/Header';
+import '../src/index.css';
 import GameList from './Components/GameList';
+import GameDetails from './Components/GameDetails';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <GameList />
+      <Routes>
+        <Route path="/" element={<GameList />} />
+        <Route path="/:id" element={<GameDetails />} />
+      </Routes>
     </div>
   );
 }

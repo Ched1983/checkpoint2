@@ -1,0 +1,26 @@
+.gameDetails {
+    height: 100%;
+    width: 100%;
+    background-color: #0f0f0f;
+}
+
+.gameDetails_Div{
+    height: 100px;
+    width: 500px;
+    background-color: #414141;
+}
+
+.gameDetails_title{
+    color: white;
+    font-size: 50px;
+}
+
+.gameDetails-img{
+    height: 150px;
+    width: auto;
+}
+
+.gameDetails-rating{
+    color: white;
+    font-size: 30px;
+}
