@@ -11,12 +11,17 @@ const GameList = () => {
             .catch(error => console.log(error));
 
     }, []);
+    const [filtre, setFiltre] = useState(false)
+    const filtered = ()=>{
+        setFiltre(!filtre)
+    }
     return (
         <div>
+            <button onClick={filtered}>{filtre? 'Tous les jeux' : 'Filtre note > 4,5'}</button>
             {resultApi
+                .filter((gameFiltre)=>filtre? gameFiltre.rating >= 4.5 : gameFiltre )
                 .map(result => {
                     return <Game key={result.id} name={result.name} image={result.background_image} note={result.rating} />
-
                 })
             }
         </div>
