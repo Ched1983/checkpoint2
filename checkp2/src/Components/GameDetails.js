@@ -15,16 +15,20 @@ const GameDetails = () => {
     }, [index]);
 
     return (
-        <div className='gameDetails'>
+        <div>
             <Header />
-            <div className='gameDetails_Div'>
-                <h2 className='gameDetails_title'>{resultApi.name}</h2>
+            <div  className='gameDetails'>
+                <div className='gameDetails_Div'>
+                    <h2 className='gameDetails_title'>{resultApi.name}</h2>
+                    <img className='gameDetails-img' src={resultApi.background_image} alt={resultApi.name} />
+                    <h3 className='gameDetails-rating'>Note: {resultApi.rating}/5</h3>
+                    <p className='gameDetails_text'>Type: Heroe, Aventure</p>
+                    <p className='gameDetails_text'>Interdit aux -16 ans</p>
+                    <NavLink onClick={''} to={`/`}>
+                        <button>retour</button>
+                    </NavLink>
+                </div>
             </div>
-                <img className='gameDetails-img' src={resultApi.background_image} alt={resultApi.name} />
-                <h3 className='gameDetails-rating'>Note: {resultApi.rating}/5</h3>
-                <NavLink onClick={''} to={`/`}>
-                    <button>retour</button>
-                </NavLink>
         </div>
     );
 };

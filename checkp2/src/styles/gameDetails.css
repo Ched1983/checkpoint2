@@ -1,26 +1,37 @@
 .gameDetails {
+    display: flex;
+    justify-content: center;
     height: 100%;
     width: 100%;
     background-color: #0f0f0f;
 }
 
 .gameDetails_Div{
-    height: 100px;
-    width: 500px;
-    background-color: #414141;
+    height: 550px;
+    width: 350px;
+    background-color: gray;
+    border-radius: 20px;
+    text-align: center;
 }
 
 .gameDetails_title{
     color: white;
-    font-size: 50px;
+    font-size: 30px;
+    height: 70px;
 }
 
 .gameDetails-img{
-    height: 150px;
-    width: auto;
+    height: auto;
+    width: 300px;
+    border-radius: 20px;
 }
 
 .gameDetails-rating{
     color: white;
     font-size: 30px;
+}
+
+.gameDetails_text{
+    color: white;
+    font-size: 20px;
 }
